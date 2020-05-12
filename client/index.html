@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.ico" type="image/icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Talpa Puncher</title>
+</head>
+
+<body>
+    <div class="game">
+        <div class="game-header">
+            <select name="game-mode" id="game-mode">
+                    <option class="option" value="1">Easy</option>
+                    <option class="option" value="2">Medium</option>
+                    <option class="option" value="3">Hard</option>
+                </select>
+            <input type="text" name="player-name" placeholder="Enter our name" id="player-name">
+            <button class="play">Play</button>
+        </div>
+        <div class="game-field">
+            <div class="game-cell game-cell-1"></div>
+            <div class="game-cell game-cell-2"></div>
+            <div class="game-cell game-cell-3"></div>
+            <div class="game-cell game-cell-4"></div>
+            <div class="game-cell game-cell-5"></div>
+            <div class="game-cell game-cell-6"></div>
+            <div class="game-cell game-cell-7"></div>
+            <div class="game-cell game-cell-8"></div>
+            <div class="game-cell game-cell-9"></div>
+            <div class="game-cell game-cell-10"></div>
+            <div class="game-cell game-cell-11"></div>
+            <div class="game-cell game-cell-12"></div>
+            <div class="game-cell game-cell-13"></div>
+            <div class="game-cell game-cell-14"></div>
+            <div class="game-cell game-cell-15"></div>
+            <div class="game-cell game-cell-16"></div>
+        </div>
+    </div>
+
+    <div class="winner-modal-window">
+        <p class="winner-field">Player</p>
+        <button class="close-modal winner-modal-close">Close</button>
+    </div>
+
+    <div class="leaderboard-window">
+        <p class="leaderboard-header">Winners</p>
+        <div class="leaderboard-content"></div>
+        <button class="delete-leaderboard">Delete leaderboard</button>
+        <button class="close-modal leaderboard-modal-close">Close</button>
+    </div>
+    <div class="winners"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+<script src="./script/main.js"></script>
+
+</html>

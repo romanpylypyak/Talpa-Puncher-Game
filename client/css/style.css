@@ -1,0 +1,211 @@
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    background: url("../img/background.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 82vh;
+    position: relative;
+}
+
+.game {
+    width: 406px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.game-field {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-columns: repeat(4, 101px);
+}
+
+.game-cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    background: #f1dd97a3;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.blue {
+    background: url("../img/talpa.png")
+}
+
+.green {
+    background: url("../img/hittenTalpa.png")
+}
+
+.red {
+    background: #f44336c2
+}
+
+.winner-modal-window,
+.leaderboard-window {
+    display: none;
+}
+
+.winner-modal-window.active {
+    background: url("../img/winnerBoard.png") no-repeat center;
+    width: 325px;
+    height: 130px;
+    border-radius: 13px;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    display: block;
+    left: calc(50% - 160px);
+}
+
+.leaderboard-window.active {
+    background: url("../img/leaderboardWindow.png") no-repeat center;
+    width: 400px;
+    height: 390px;
+    border-radius: 13px;
+    padding: 10px;
+    position: absolute;
+    top: 5%;
+    display: block;
+    left: calc(50% - 210px);
+}
+
+.winner-modal-window .winner-field {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.leaderboard-header {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    font-family: cursive;
+}
+
+.winner-modal-window .close-modal {
+    position: absolute;
+    bottom: 33px;
+    right: 15px;
+    background: #0000;
+    border: 1px solid #0000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 17px;
+    outline: none;
+}
+
+.leaderboard-window .close-modal {
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    padding: 7px 30px;
+    background: #54e84a;
+    border: 1px solid #0000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+}
+
+.winnerInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.winnerInfo:last-child {
+    margin-bottom: 10px;
+}
+
+.leaderboard-content {
+    overflow-y: scroll;
+    height: 318px;
+}
+
+.game-field {
+    cursor: url('../img/hammer.png'), pointer;
+}
+
+.winners::before {
+    content: "";
+    background: url(../img/leaderboard.png) no-repeat center;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: -2%;
+    right: 1%;
+    cursor: pointer;
+}
+
+.play {
+    padding: 7px 30px;
+    background: #54e84a;
+    border: 1px solid #0000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#player-name {
+    background: #ffffff96;
+    border: 1px solid #0000;
+    font-size: 18px;
+    outline: none;
+    width: 200px;
+}
+
+#player-name::placeholder,
+#player-name:-ms-input-placeholder,
+#player-name::-ms-input-placeholder {
+    color: #3e3838
+}
+
+#game-mode {
+    background: #ffffff69;
+    border: 1px solid #0000;
+    font-size: 18px;
+    color: #3e3838;
+    outline: none;
+}
+
+.delete-leaderboard {
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    padding: 7px 7px;
+    background: #f73f32;
+    border: 1px solid #0000;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+}
+
+.option {
+    background: #ebdea9;
+}
