@@ -5,7 +5,7 @@ const mysql = require("mysql2/promise")
 const config = require("./config")
 
 
-app.use(express.static(path.resolve(__dirname, 'client')))
+app.use(express.static(path.resolve("./", 'client')))
 app.use(express.json())
 
 app.delete('*', async function(req, res, next) {

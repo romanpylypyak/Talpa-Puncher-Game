@@ -158,7 +158,7 @@ function countWinner(player, computer, showInteval) {
 
 function sendAJAX(winner) {
     let xhttp = new XMLHttpRequest();
-    xhttp.open("post", "../index.js", true)
+    xhttp.open("post", "../server/index.js", true)
     xhttp.setRequestHeader("Content-type", "application/json")
     if (winner === "") {
         xhttp.send()
@@ -189,7 +189,7 @@ function sendAJAX(winner) {
 
 function deleteDBRequest() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open('DELETE', "../index.js", true);
+    xhttp.open('DELETE', "../server/index.js", true);
     xhttp.onreadystatechange = function() {
         if (this.status == 200 && this.readyState == 4) {
             result(this.responseText)
